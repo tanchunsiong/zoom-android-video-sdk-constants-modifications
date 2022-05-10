@@ -336,7 +336,7 @@ public class BaseSessionActivity extends AppCompatActivity implements View.OnCli
         sessionContext.userName = name;
 
         //GET START
-        String token = Constants.TOKEN();
+        String token = Constants.TOKEN(sessionName);
 
         if (TextUtils.isEmpty(token)) {
             Toast.makeText(this, "Token is empty", Toast.LENGTH_LONG).show();
