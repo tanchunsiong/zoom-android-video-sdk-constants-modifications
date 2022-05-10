@@ -19,7 +19,7 @@ public class Constants {
     public final static String WEB_DOMAIN = "zoom.us";
 
 
-    public	static String TOKEN(){
+    public	static String TOKEN(String sessionName ){
         // Create URL
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -37,12 +37,18 @@ public class Constants {
 
             conn.connect();
 
+            String _sessionName=sessionName;
+            if (_sessionName==null) _sessionName="herochun6871";
+
+
+
+
 
             JSONObject jsonParam = new JSONObject();
-            jsonParam.put("sessionName", "yoursessioname3213");
+            jsonParam.put("sessionName", _sessionName);
             jsonParam.put("role", 1);
-            jsonParam.put("user_identity", "user_identity3213");
-            jsonParam.put("session_key", "session_key3213");
+            jsonParam.put("user_identity", "user_identity6871");
+            jsonParam.put("session_key", "session_key6871");
 
 
 
